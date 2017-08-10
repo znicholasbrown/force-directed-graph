@@ -11,9 +11,8 @@ var svg = canvas.append("svg")
 
 
 setTimeout(() => {
-  $.getJSON("../json/data.json", (data)=>{
-  
-  
+  $.getJSON("https://raw.githubusercontent.com/DealPete/forceDirected/master/countries.json", (data)=>{
+
   var force = d3.forceSimulation()
   .force("link", d3.forceLink().id( (d, i) => { return i; }))
   .force('charge_force', d3.forceManyBody().strength(-2.75)) 
